@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PLAY &amp; TRAVEL | 파크골프 여행</title>
+<meta name="description" content="라운딩이 여행이 되는 순간. 파크골프, 맛집, 관광을 하루 코스로 묶은 국내 여행.">
+<!-- [수정 가이드] 폰트: 아래 3줄이 제목/본문/영문 폰트 로드입니다. 바꾸려면 css/style.css 의 :root 폰트 변수도 같이 수정하세요. -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap">
+<style>@font-face{font-family:'GmarketSans';font-weight:700;src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');font-display:swap}</style>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============ 0. HEADER (메뉴바) ============
+ [수정 가이드] 메뉴 추가/삭제: <li> 한 줄을 복사/삭제하고 href를 해당 섹션 id와 맞추세요. -->
+<header class="header" id="header">
+  <a class="logo" href="#hero">PLAY &amp; TRAVEL</a>
+  <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+  <nav class="nav" id="nav">
+    <ul>
+      <li><a href="#about">소개</a></li>
+      <li><a href="#best">추천 여행지</a></li>
+      <li><a href="#course">하루 코스</a></li>
+      <li><a href="#destination">여행 경험</a></li>
+      <li><a href="#review">후기</a></li>
+      <li><a class="nav-cta" href="#cta">여행 신청</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+<!-- ============ 1. HERO ============
+ [수정 가이드] 대표 이미지: images/hero.jpg 를 교체하거나 src 주소를 바꾸세요. 동영상으로 바꾸려면 <img>를 <video autoplay muted loop playsinline src="..."> 로 교체. 카피는 h1/p 텍스트 수정. -->
+<section class="hero" id="hero">
+  <div class="media"><img src="imgs/hero.jpg" alt="초록 잔디 위에서 파크골프를 즐기는 사람들"></div>
+  <div class="hero-text">
+    <p class="en">PLAY &amp; TRAVEL</p>
+    <h1>라운딩이<br>여행이 되는 순간</h1>
+    <p>아름다운 자연에서 즐기는 파크골프,<br>지역의 맛과 풍경까지 함께 만나는 특별한 여행</p>
+    <a class="btn" href="#best">추천 여행지 보기</a>
+  </div>
+</section>
+
+<!-- ============ 2. ABOUT ============
+ [수정 가이드] 숫자 3개는 data-count 값만 바꾸면 스크롤 시 카운트업됩니다(js/main.js 3번). -->
+<section class="section" id="about">
+  <div class="wrap about">
+    <div>
+      <h2>골프장만 소개하지 않습니다</h2>
+      <p>파크골프, 국내여행, 맛집, 관광을 하나의 하루 일정으로 묶었습니다. 오전엔 가볍게 라운딩하고, 점심은 지역 맛집에서, 오후엔 그 고장의 풍경을 걷습니다.</p>
+      <ul class="stats">
+        <li><b data-count="3">0</b><span>추천 지역</span></li>
+        <li><b data-count="12">0</b><span>제안 코스</span></li>
+        <li><b data-count="98">0</b><span>% 재방문 의향</span></li>
+      </ul>
+    </div>
+    <figure class="media"><img src="imgs/골프장_03-1_03.jpg" alt="파크골프장 옆 산책로 풍경"></figure>
+  </div>
+</section>
+
+<!-- ============ 3. BEST COURSE ============
+ [수정 가이드] 카드 추가: <button class="card" data-region="키"> 블록을 복사하고, js/main.js 의 COURSES 객체에 같은 키로 일정을 추가하세요. 카드를 누르면 4번 TRAVEL COURSE가 바뀝니다. -->
+<section class="section alt" id="best">
+  <div class="wrap">
+    <h2>추천 파크골프 여행지</h2>
+    <div class="cards" role="tablist" aria-label="추천 여행지">
+      <button class="card active" data-region="jeju" role="tab" aria-selected="true">
+        <span class="media"><img src="imgs/34d16e30-e356-4af3-9265-eec7d5b05a98.png" alt="제주 해안 풍경"></span>
+        <strong>제주 파크골프 여행</strong><em>바다 바람 속 라운딩</em>
+      </button>
+      <button class="card" data-region="gangwon" role="tab" aria-selected="false">
+        <span class="media"><img src="imgs/de96ba76-ca57-4d23-9f98-bb52127ca223.png" alt="강원 산과 호수 풍경"></span>
+        <strong>강원 파크골프 여행</strong><em>숲과 호수 사이의 하루</em>
+      </button>
+      <button class="card" data-region="namdo" role="tab" aria-selected="false">
+        <span class="media"><img src="imgs/0382c516-92be-4a4f-81d7-77b4785a09f2.png" alt="남도 들판과 한옥 풍경"></span>
+        <strong>남도 파크골프 여행</strong><em>한 상 가득 남도의 맛</em>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. TRAVEL COURSE ============
+ [수정 가이드] 일정 내용은 직접 쓰지 않고 js/main.js 의 COURSES 에서 수정합니다. 이 영역은 JS가 채웁니다. -->
+<section class="section" id="course">
+  <div class="wrap">
+    <h2 id="courseTitle">하루 여행 코스</h2>
+    <ol class="timeline" id="timeline" aria-live="polite"></ol>
+  </div>
+</section>
+
+<!-- ============ 5. DESTINATION ============
+ [수정 가이드] 탭 추가: 버튼 data-tab 값과 패널 id(tab-값)를 같게 맞추세요. -->
+<section class="section alt" id="destination">
+  <div class="wrap">
+    <h2>네 가지 여행 경험</h2>
+    <div class="tabs" role="tablist">
+      <button class="tab active" data-tab="golf" role="tab" aria-selected="true">파크골프</button>
+      <button class="tab" data-tab="food" role="tab" aria-selected="false">맛집</button>
+      <button class="tab" data-tab="nature" role="tab" aria-selected="false">자연</button>
+      <button class="tab" data-tab="healing" role="tab" aria-selected="false">힐링</button>
+    </div>
+    <div class="panel active" id="tab-golf" role="tabpanel"><figure class="media"><img src="imgs/파크골프.png" alt="파크골프 라운딩"></figure><p>채 하나, 공 하나로 시작합니다. 코스가 평탄해 처음 와도 바로 즐길 수 있어요.</p></div>
+    <div class="panel" id="tab-food" role="tabpanel"><figure class="media"><img src="imgs/맛집.png"></figure><p>라운딩 후 먹는 점심은 그 지역에서 가장 오래된 집으로 정했습니다.</p></div>
+    <div class="panel" id="tab-nature" role="tabpanel"><figure class="media"><img src="imgs/자연.png" alt="푸른 자연 풍경"></figure><p>바다, 숲, 들판. 코스마다 풍경이 달라 같은 지역도 다시 오게 됩니다.</p></div>
+    <div class="panel" id="tab-healing" role="tabpanel"><figure class="media"><img src="imgs/힐링.png" alt="편안한 숙소와 휴식"></figure><p>많이 걷지 않아도 충분히 쉬는 일정. 숙소에서의 저녁까지 여행에 포함합니다.</p></div>
+  </div>
+</section>
+
+<!-- ============ 6. REVIEW ============
+ [수정 가이드] 후기 추가: <article class="slide"> 블록을 복사하세요. 개수는 JS가 자동 인식합니다. 5초마다 자동 전환(js/main.js 6번에서 시간 조정). -->
+<section class="section" id="review">
+  <div class="wrap">
+    <h2>여행자 후기</h2>
+    <div class="slider" id="slider">
+      <div class="track" id="track">
+        <article class="slide"><figure class="media"><img src="imgs/부모님과함께.png" alt="후기 사진 1"></figure><blockquote>부모님과 다녀왔는데 걷는 부담이 적어 더 오래 웃으셨어요.<cite>김OO · 제주 · 60대 부모님과</cite></blockquote></article>
+        <article class="slide"><figure class="media"><img src="imgs/동호회.png" alt="후기 사진 2"></figure><blockquote>동호회 친구들과 갔는데 점심 코스까지 짜여 있어 편했습니다.<cite>박OO · 강원 · 동호회</cite></blockquote></article>
+        <article class="slide"><figure class="media"><img src="imgs/숙소.png" alt="후기 사진 3"></figure><blockquote>숙소까지 포함된 일정이라 아무것도 알아볼 필요가 없었어요.<cite>이OO · 남도 · 부부</cite></blockquote></article>
+      </div>
+      <div class="slider-ctl">
+        <button id="prev" aria-label="이전 후기">&larr;</button>
+        <span id="count">1 / 3</span>
+        <button id="next" aria-label="다음 후기">&rarr;</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7. CTA ============
+ [수정 가이드] 실제 접수는 form의 action 주소(서버/폼 서비스)를 연결해야 합니다. 현재는 입력 검사 후 안내 문구만 표시합니다(js/main.js 7번). -->
+<section class="travel-cta">
+  <h2>파크골프, 이제 여행처럼 즐겨보세요</h2>
+
+  <div class="cta-form">
+    <div class="cta-text">
+      라운딩부터 맛집, 자연, 휴식까지
+    </div>
+
+    <a href="#course" class="cta-button">
+      여행 코스 보기
+    </a>
+  </div>
+</section>
+
+
+
+<!-- ============ 8. FOOTER ============
+ [수정 가이드] 회사명, 연락처, 저작권 문구를 아래에서 수정하세요. -->
+<footer class="footer">
+  <div class="wrap">
+    <strong>PLAY &amp; TRAVEL</strong>
+    <p>문의 hello@playtravel.example · 02-700-100</p>
+    <small>&copy; 2026 PLAY &amp; TRAVEL. All rights reserved.</small>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
